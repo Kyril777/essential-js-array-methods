@@ -1,2 +1,2 @@
 # essential-js-array-methods
-A collection of the must-know JS array methods for React.
+A collection of the must-know JS array methods for React (to be further tested).
