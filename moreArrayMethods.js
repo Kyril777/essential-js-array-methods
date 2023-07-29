@@ -35,12 +35,28 @@ const keywordsArray = ['investing', 'articles', 'the-history-of-bitcoin'];
 const keywordString = keywordsArray.join(', ');
 console.log(keywordString); // output: "investing, articles, the-history-of-bitcoin"
 
-
 // Use the join() method to create a URL address.
 const queryParamsArray = [ 'investing', 'articles','the-history-of-bitcoin',];
 const queryString = queryParamsArray.join('/');
 const url = 'https://money.usnews.com/' + queryString;
 console.log(url); // output: "https://money.usnews.com/investing/articles/the-history-of-bitcoin"
+
+
+/* Transforming an array.  */
+//  Use the map() function to create a new arrau, queStringArray, and apply the createParams function to each object in the queParams array. Use the join() function to create the final query string, apply the  the '&' delimiter to separate each param=value pair. 
+const queParams = [
+  { param: 'keywords', value: 'российский' },
+  { param: 'origin', value: 'FACETED_SEARCH' },
+  { param: 'sid', value: 'eNM' },
+  { param: 'sortBy', value: '\"date_posted\"' },
+];
+function createParams(obj) {
+  return obj.param + '=' + obj.value;
+}
+const queStringArray = queParams.map(createParams);
+const queString = queStringArray.join('&');
+const url = 'https://www.linkedin.com/search/results/content/?' + queString;
+document.write(url); // output: https://www.linkedin.com/search/results/content/?keywords=российский&origin=FACETED_SEARCH&sid=eNM&sortBy="date_posted"
 
 
 
