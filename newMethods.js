@@ -12,3 +12,10 @@ let maximum = Math.max(...values);
 
 console.log(minimum); // Output: 111019
 console.log(maximum); // Output: 191437
+
+
+// The push() functions adds new items to the end of an array.
+const presidents = ["Kennedy", "Washington", "Jefferson", "Roosevelt"];
+presidents.push("Bush", "Polk");
+
+console.log(presidents); // Output: [ "Kennedy", "Washington", "Jefferson", "Roosevelt", "Bush", "Polk" ]
