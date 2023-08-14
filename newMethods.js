@@ -19,3 +19,10 @@ const presidents = ["Kennedy", "Washington", "Jefferson", "Roosevelt"];
 presidents.push("Bush", "Polk");
 
 console.log(presidents); // Output: [ "Kennedy", "Washington", "Jefferson", "Roosevelt", "Bush", "Polk" ]
+
+
+// The flatMap() method combines flat() and map().
+const scouts = [ {name: 'Keenan', badges: ['heart', 'star']}, {name: 'Avery', badges: ['cub', 'star']};
+const scoutsBages = scouts.flatMap(item => item.badges);
+
+console.log(scoutsBadges); // Ouput: ["heart", "star", "cub", "star"]
