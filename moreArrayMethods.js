@@ -59,6 +59,22 @@ const url = 'https://www.linkedin.com/search/results/content/?' + queString;
 document.write(url); // output: https://www.linkedin.com/search/results/content/?keywords=российский&origin=FACETED_SEARCH&sid=eNM&sortBy="date_posted"
 
 
+/* Verify if an array includes an element in a base array. */
+// Use the some() function to see if three batches of elements contains a noble gas.
+const batch1 = ['sodium', 'krypton', 'phosphorous', 'argon', 'cobalt'];
+const batch2 = ['boron', 'neon', 'calcium', 'xenon', 'silver'];
+const batch3 = ['oxygen', 'cobalt', 'potassium', 'silicon'];
+
+const nobleGases = ['helium', 'neon', 'argon', 'krypton', 'xenon', 'radon'];
+
+const hasNobleGases = item => nobleGases.includes(item);
+
+console.log(batch1.some(hasNobleGases) ? "Batch contains at least a noble gas." : "Batch has no noble gas."); // Output: "Batch contains at least a noble gas."
+console.log(batch2.some(hasNobleGases) ? "Batch contains at least a noble gas." : "Batch has no noble gas."); // Output: "Batch contains at least a noble gas."
+console.log(batch3.some(hasNobleGases) ? "Batch contains at least a noble gas." : "Batch has no noble gas."); // Output: "Batch has no noble gas."
+
+
+
 
 
 
