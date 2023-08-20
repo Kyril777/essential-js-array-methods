@@ -74,6 +74,13 @@ console.log(batch2.some(hasNobleGases) ? "Batch contains at least a noble gas." 
 console.log(batch3.some(hasNobleGases) ? "Batch contains at least a noble gas." : "Batch has no noble gas."); // Output: "Batch has no noble gas."
 
 
+// Use concat() function to entail a new array.
+let albums = ["flowers", "family", "cards", "birthdays"];
+let newAlbums = albums.concat("family", "spring", "vacation");
+
+console.log(newAlbums); // Output: ["flowers", "family", "cards", "birthdays", "family", "spring", "vacation"]
+
+
 
 
 
