@@ -26,3 +26,41 @@ const scouts = [ {name: 'Keenan', badges: ['heart', 'star']}, {name: 'Avery', ba
 const scoutsBages = scouts.flatMap(item => item.badges);
 
 console.log(scoutsBadges); // Ouput: ["heart", "star", "cub", "star"]
+
+
+// Convert string into an array
+const string = "RESPECT";
+const array = Array.from(string);
+console.log(array); // Output: ["R", "E", "S", "P", "E", "C", "T"]
+
+// Convert Set into an array
+const things = new Set(["borders", "washers", "strawberries", "net", "calculator"]);
+const arry = Array.from(things);
+console.log(arry); // Output: ["borders", "washers", "strawberries", "net", "calculator"]
+
+
+// Destructure an array by assigning a destructuring assignment. Simply leave an empty string if blank.
+const ranking = ["Sundown", "Slider", "", "Jester", "Merlin"];
+const [fifth, fourth, third, second, first] = ranking;
+
+console.log(first); // Output: "Merlin"
+console.log(second); // Output: "Jester"
+console.log(third); // Output: ""
+
+
+// Destructure an array by assigning a destructuring assignment. Simply leave an empty string if blank.
+const pilot = {
+  name: 'Pete Maverick',
+  address: '',
+  yearsOfService: 39,
+  rank: 'Captain'
+};
+
+const {name, address, yearsOfService, rank} = pilot;
+
+console.log(name); // Output: "Pete Maverick"
+console.log(address); // Output: ""
+console.log(yearsOfService); // Output: 39
+console.log(rank); // Output: "Captain"
+
+
