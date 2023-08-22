@@ -64,3 +64,10 @@ console.log(yearsOfService); // Output: 39
 console.log(rank); // Output: "Captain"
 
 
+// Use the filter() method to remove "falsy" elements.
+const arr = [35, 7, 0, '', undefined, null, 2, NaN, false];
+const filteredArr = arr.filter(Boolean);
+
+console.log(filteredArr); // Output: [35, 7, 2]
+
+
