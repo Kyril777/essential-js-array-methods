@@ -59,21 +59,17 @@ array2.forEach((commodity) => {
 
 
 /* The every() function checks for the existence of at least one item. */
-/* We will use the every function to find if there is an item that costs 7.57. */
+/* We will use the every function to find if every item costs less than 16.00 */
 
-const hasSevenFiftySeven = array2.every((commodity) => {
-    return commodity.price == 7.57;
-});
+array2.every((commodity) => {
+    console.log(commodity.price <= 16.00) 
+}); // Output: true
 
-console.log(hasSevenFiftySeven);
+/* Let us also find if every item costs less than 2.00. */
+array2.every((commodity) => {
+    console.log(commodity.price <= 2.00)
+});  // Output: false
 
-/* Let us also find if there is an item that costs 9.99. */
-
-const hasNineNinetyNine = array2.every((commodity) => {
-    return commodity.price == 9.99;
-});
-
-console.log(hasNineNinetyNine);
 
 
 /* The reduce() function returns a combination of all the of all those different operations. */
