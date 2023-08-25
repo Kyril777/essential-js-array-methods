@@ -1,18 +1,15 @@
-/*
-Essential JS Array Methods 
-*/
+/* Essential JS Array Methods */
 
 /* The map() method allows you to take one array and convert it into a new array. Each item in the new array will be the result of a function. */
 /* Let us find the square value for each element in the array. */
 
 const array1 = [1, 2, 3, 4];
-
 const square = array1.map(x => x * x);
 
-console.log(square);
+console.log(square); // Output: [1, 4, 9, 16]
 
-/* Let us create a new array for a shopping list.  */
 
+/* Create a new array for a shopping list.  */
 const array2 = [
     {item: 'Eggs', price: 4.99},
     {item: 'Milk', price: 7.57},
@@ -29,7 +26,8 @@ const filteredArray = array2.filter((commodity) => {
     return commodity.price >= 10;
 })
 
-console.log(filteredArray);
+console.log(filteredArray); // Output: [{ item: "Steak", price: 12.73 }, { item: "Towels", price: 15.99, { item: "Potatoes", price: 10.39 }]
+
 
 
 /* The find() method finds a single object in an array. */
@@ -39,7 +37,7 @@ const foundItem = array2.find((commodity) => {
     return commodity.item === 'Steak';
   });
   
-console.log(foundItem);
+console.log(foundItem); // Output: { item: "Steak", price: 12.73 }
 
 
 /* Sometimes we just want to know if an item is contained inside of an array, which is what the some() function can do. */
@@ -49,7 +47,7 @@ const costsOverTwenty = array2.some((commodity) => {
     return commodity.price >= 20;
   });
   
-console.log(costsOverTwenty);
+console.log(costsOverTwenty); // Output: false
 
 
 /* The forEach() function allows us to find the name of each entry in the array. */
@@ -57,13 +55,13 @@ console.log(costsOverTwenty);
 
 array2.forEach((commodity) => {
     console.log(commodity.item)
- });
+ }); // Output: "Eggs" "Milk" "Tuna" "Steak" "Towels" "Potatoes"
 
 
- /* The every() function checks for the existence of at least one item. */
- /* We will use the every function to find if there is an item that costs 7.57. */
+/* The every() function checks for the existence of at least one item. */
+/* We will use the every function to find if there is an item that costs 7.57. */
 
- const hasSevenFiftySeven = array2.every((commodity) => {
+const hasSevenFiftySeven = array2.every((commodity) => {
     return commodity.price == 7.57;
 });
 
@@ -85,14 +83,13 @@ const total = array2.reduce((currentTotal, commodity) => {
     return commodity.price + currentTotal;
 }, 0);
 
-console.log(total);
+console.log(total); // Output: 54.260000000000005
 
 
 /* The includes() method helps us find if an item is "included" in the array. */
 /* We will have new array of the first 20 prime numbers. We want to know if 33 is in the array, */
 
 const array3 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71]
+const includesThirtyOne = array3.includes(31);
 
-const includesThirtyThree = array3.includes(33);
-
-console.log(includesThirtyThree);
+console.log(includesThirtyOne); // Output: true
