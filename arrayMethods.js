@@ -94,9 +94,18 @@ console.log(includesThirtyOne); // Output: true
 // The reduce() method returns a single value: the function's accumulated result. 
 // Use the reduce method to aggregate all figures in an array and subtract the last figure on the array.
 const figures = [100, 50, 10];
-const reduced_figures = figures.reduce(myFunc);
-function myFunc(total, num) {
+const reduced_figures = figures.reduce(subtracter);
+function subtracter(total, num) {
   return total - num;
 }
 
 console.log(reduced_figures); // Output: 100
+
+// Use the reduce method to aggregate all figures in an array.
+const figures = [100, 50, 10];
+const reduced_figures = figures.reduce(adder);
+function adder(total, num) {
+  return total + num;
+}
+
+console.log(reduced_figures); // Output: 160
