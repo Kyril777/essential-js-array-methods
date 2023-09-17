@@ -89,3 +89,14 @@ const array3 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 
 const includesThirtyOne = array3.includes(31);
 
 console.log(includesThirtyOne); // Output: true
+
+
+// The reduce() method returns a single value: the function's accumulated result. 
+// Use the reduce method to aggregate all figures in an array and subtract the last figure on the array.
+const figures = [100, 50, 10];
+const reduced_figures = figures.reduce(myFunc);
+function myFunc(total, num) {
+  return total - num;
+}
+
+console.log(reduced_figures); // Output: 100
