@@ -109,3 +109,27 @@ function adder(total, num) {
 }
 
 console.log(reduced_figures); // Output: 160
+
+
+// Use reduce() function to join string elenets.
+const message = ["Jason ", "does ", "the ", "bone."];
+
+function joinStrings(acc, curr) {
+  return acc + curr;
+}
+
+let joinedString = message.reduce(joinStrings);
+console.log(joinedString); // Output: "Jason does the bone."
+
+
+// Use reduce() function to find produce the minimum and maximum values of an array.
+function minMaxValues(figures) {
+	return figures.reduce((accumulate, currentValue) => {
+  	accumulate[0] = ( accumulate[0] === undefined || currentValue < accumulate[0] ) ? currentValue : accumulate[0] 
+    accumulate[1] = ( accumulate[1] === undefined || currentValue > accumulate[1] ) ? currentValue : accumulate[1]
+    return accumulate;
+    }, []);
+}
+
+const results = minMaxValues([21, 101, 7, 75, 61, 39]);
+console.log(results); // Output: [7, 101]
