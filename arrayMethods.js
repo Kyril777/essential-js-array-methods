@@ -101,6 +101,18 @@ function subtracter(total, num) {
 
 console.log(reduced_figures); // Output: 100
 
+
+// Use reduce() function to find out total of values within an object.
+let init = 0;
+let items = [{x: 10}, {x: 18}, {x: 33}, {x: 52}, {x: 20}];
+
+let aggregate = items.reduce(function (acc, curr) {
+    return acc + curr.x;
+}, init);
+
+console.log(aggregate); // Output: 133
+
+
 // Use the reduce method to aggregate all figures in an array.
 const figures = [100, 50, 10];
 const reduced_figures = figures.reduce(adder);
@@ -125,10 +137,10 @@ console.log(joinedString); // Output: "Jason does the bone."
 // Use reduce() function to find produce the minimum and maximum values of an array.
 function minMaxValues(figures) {
 	return figures.reduce((accumulate, currentValue) => {
-  	accumulate[0] = ( accumulate[0] === undefined || currentValue < accumulate[0] ) ? currentValue : accumulate[0] 
-    accumulate[1] = ( accumulate[1] === undefined || currentValue > accumulate[1] ) ? currentValue : accumulate[1]
-    return accumulate;
-    }, []);
+  		accumulate[0] = ( accumulate[0] === undefined || currentValue < accumulate[0] ) ? currentValue : accumulate[0] 
+    		accumulate[1] = ( accumulate[1] === undefined || currentValue > accumulate[1] ) ? currentValue : accumulate[1]
+    		return accumulate;
+   	}, []);
 }
 
 const results = minMaxValues([21, 101, 7, 75, 61, 39]);
