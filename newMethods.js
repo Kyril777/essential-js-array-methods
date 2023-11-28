@@ -71,3 +71,26 @@ const filteredArr = arr.filter(Boolean);
 console.log(filteredArr); // Output: [35, 7, 2]
 
 
+// Use reduce() method to assign true boolean to all elements in an array.
+const lawyers = ['Meagher', 'Thacher', 'Bartlett', 'Cromwell', 'Wardwell', 'Gotshal', 'Gottlieb', 'Wharton'];
+
+const lawyerLookup = lawyers.reduce((accumulator, current) => {
+	accumulator[current] = true;
+  return accumulator;
+}, {});
+
+console.log(lawyerLookup);
+
+/* Output:
+{
+  Bartlett: true,
+  Cromwell: true,
+  Gotshal: true,
+  Gottlieb: true,
+  Meagher: true,
+  Thacher: true,
+  Wardwell: true,
+  Wharton: true
+}
+*/
+
